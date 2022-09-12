@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tazah_tech_sale/config/app_screen_names.dart';
-import 'package:tazah_tech_sale/config/app_constants.dart';
+import 'package:tazah_tech_sale/utils/app_screen_names.dart';
 import 'package:tazah_tech_sale/views/screens/auth_screen.dart';
 import 'package:tazah_tech_sale/views/screens/home_screen.dart';
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
-import 'package:tazah_tech_sale/config/app_colors.dart';
-import 'package:tazah_tech_sale/config/app_screen_names.dart';
+import 'package:tazah_tech_sale/utils/app_screen_names.dart';
 import 'package:tazah_tech_sale/cubits/auth_example_cubit/auth_cubit.dart';
 import 'package:tazah_tech_sale/views/widgets/circular_button.dart';
 import 'package:tazah_tech_sale/views/widgets/custom_text_field.dart';
+
+import '../../utils/app_colors.dart';
 
 class LoginScreen extends StatelessWidget {
   TextEditingController userNameController = TextEditingController();
@@ -81,13 +81,14 @@ class LoginScreen extends StatelessWidget {
                             if (userName!.isEmpty) {
                               return 'Please enter username';
                             }
+                            return null;
                           }),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
 
-                    ///password textfield
+                    ///passwordTextField
                     Expanded(
                       flex: 2,
                       child: CustomTextField(
@@ -106,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                         },
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
 

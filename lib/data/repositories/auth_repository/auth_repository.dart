@@ -1,14 +1,16 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:tazah_tech_sale/config/app_constants.dart';
-import 'package:tazah_tech_sale/data/models/user_model.dart';
+
+import '../../../utils/app_constants.dart';
+import '../../response_models/user_model.dart';
 
 abstract class AuthRepoInterface {
   Future<List<User>?> fetchUsers();
 }
 
 class AuthRepository implements AuthRepoInterface {
+  @override
   Future<List<User>?> fetchUsers() async {
     Uri uri = Uri.parse(
       AppConstants.usersUrl,
@@ -21,9 +23,8 @@ class AuthRepository implements AuthRepoInterface {
     try {
       var response = await http.get(uri, headers: headers);
       if (response.statusCode == 200) {
-        List<User> users = (json.decode(response.body) as List)
-            .map((data) => User.fromJson(data))
-            .toList();
+        List<User> users =
+            (json.decode(response.body) as List).map((data) => User.fromJson(data)).toList();
 
         return users;
       } else if (response.statusCode == 500) {

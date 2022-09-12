@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:tazah_tech_sale/data/models/user_model.dart';
 import 'package:tazah_tech_sale/data/repositories/auth_repository/auth_repository.dart';
+
+import '../../data/response_models/user_model.dart';
 
 part 'auth_state.dart';
 
@@ -22,7 +23,7 @@ class AuthCubit extends Cubit<AuthState> {
       var data = users.where(
         (user) => (user.username == userName && user.email == emailPassword),
       );
-      if (data.length >= 1) {
+      if (data.isNotEmpty) {
         emit(Authenticated());
       } else {
         emit(AuthenticationFailed());

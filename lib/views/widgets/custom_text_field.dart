@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tazah_tech_sale/config/app_colors.dart';
-import 'package:tazah_tech_sale/config/app_constants.dart';
+
+import '../../utils/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final double? horizontalMargin;

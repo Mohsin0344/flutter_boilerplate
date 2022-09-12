@@ -1,5 +1,5 @@
-import 'package:tazah_tech_sale/data/models/user_model.dart';
 import 'package:tazah_tech_sale/data/repositories/auth_repository/auth_repository.dart';
+import 'package:tazah_tech_sale/data/response_models/user_model.dart';
 
 final usersList = <User>[
   User(

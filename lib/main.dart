@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tazah_tech_sale/config/app_routes.dart';
+import 'package:tazah_tech_sale/utils/app_routes.dart';
 import 'package:tazah_tech_sale/cubits/auth_example_cubit/auth_cubit.dart';
 import 'package:tazah_tech_sale/cubits/sale_exmple_cubit/example_cubit.dart';
 import 'package:tazah_tech_sale/data/repositories/auth_repository/auth_repository.dart';
-import 'config/app_screen_names.dart';
+import 'package:tazah_tech_sale/utils/bloc_providers.dart';
+import 'utils/app_screen_names.dart';
 import 'data/repositories/example_repository/example_repository.dart';
 
 void main() {
@@ -20,13 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [
-        BlocProvider<AuthCubit>(
-            create: (context) => AuthCubit(authRepository: AuthRepository())),
-        BlocProvider<ExampleCubit>(
-            create: (context) =>
-                ExampleCubit(exampleRepository: ExampleRepository())),
-      ],
+      providers: BlocProviders.providers,
       child: ScreenUtilInit(
         designSize: const Size(360, 690),
         builder: (child) {

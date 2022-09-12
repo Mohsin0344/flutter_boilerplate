@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tazah_tech_sale/config/app_colors.dart';
 import 'package:tazah_tech_sale/cubits/sale_exmple_cubit/example_cubit.dart';
 import 'package:tazah_tech_sale/cubits/sale_exmple_cubit/example_cubit_state.dart';
+
+import '../../utils/app_colors.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
