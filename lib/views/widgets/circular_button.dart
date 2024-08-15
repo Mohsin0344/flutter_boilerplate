@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tazah_tech_sale/cubits/auth_example_cubit/auth_cubit.dart';
-
 import '../../utils/app_colors.dart';
+import '../../view_models/auth_example_cubit/auth_cubit.dart';
 
 class CircularButton extends StatelessWidget {
   final String buttonTitle;

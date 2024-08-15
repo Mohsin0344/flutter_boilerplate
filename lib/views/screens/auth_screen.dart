@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tazah_tech_sale/utils/app_screen_names.dart';
-import 'package:tazah_tech_sale/cubits/auth_example_cubit/auth_cubit.dart';
-import 'package:tazah_tech_sale/views/widgets/circular_button.dart';
-import 'package:tazah_tech_sale/views/widgets/custom_text_field.dart';
-
 import '../../utils/app_colors.dart';
+import '../../utils/app_screen_names.dart';
+import '../../view_models/auth_example_cubit/auth_cubit.dart';
+import '../widgets/circular_button.dart';
+import '../widgets/custom_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
   TextEditingController userNameController = TextEditingController();
